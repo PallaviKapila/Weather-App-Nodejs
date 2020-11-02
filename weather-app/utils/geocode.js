@@ -1,3 +1,5 @@
+const request = require("request");
+
 const geocode = (address, callback) => {
   const url =
     "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
@@ -18,8 +20,3 @@ const geocode = (address, callback) => {
     }
   });
 };
-
-geocode("Una Himachal Pradesh", (error, data) => {
-  console.log("Error", error);
-  console.log("Data", data);
-});
